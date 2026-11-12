@@ -1,6 +1,12 @@
 # Publicación de Cancha Viva
 
-Estado inicial: configuración preparada, sin URLs públicas verificadas.
+Estado al 12 de noviembre de 2026: código publicado, frontend y API comprobados.
+
+GitHub: https://github.com/kureja777/cancha-viva
+Frontend: https://cancha-viva.vercel.app
+Swagger: https://cancha-viva-api.onrender.com/docs
+
+Las instrucciones siguientes permiten reproducir el despliegue en otra cuenta.
 
 ## GitHub
 
@@ -18,8 +24,8 @@ SUPABASE_SERVICE_ROLE_KEY, WEB_AUTH_USER y WEB_AUTH_PASSWORD (mínimo 16 caracte
 CORS_ORIGINS es el origen HTTPS exacto de Vercel sin barra final.
 render.yaml describe los valores, sin secretos ni contratación de un plan.
 
-La autorización previa para la clave de Supabase fue para el archivo local .env.
-Configúrala tú directamente en Render o autoriza expresamente ese destino.
+El titular autorizó expresamente el uso de su clave en las variables privadas del
+servicio cancha-viva-api de Render. No se incluye esa credencial en el repositorio.
 Nunca pongas la clave privada en Vercel ni en variables VITE_.
 
 ## Vercel

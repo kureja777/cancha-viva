@@ -2,6 +2,12 @@
 
 Sistema académico de reservas. Datos ficticios. Jhimi Jairo Mamani Blanco.
 
+## Enlaces públicos
+
+Web: https://cancha-viva.vercel.app
+API Swagger: https://cancha-viva-api.onrender.com/docs
+Las rutas exigen la credencial de demostración. Las claves privadas no se publican.
+
 ## Abrir en esta laptop
 
 Haz doble clic en ABRIR_CANCHA_VIVA.cmd. Abre http://127.0.0.1:5173/.
