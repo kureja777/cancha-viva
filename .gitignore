@@ -1,0 +1,13 @@
+frontend/node_modules/
+frontend/dist/
+frontend/.pnpm-store/
+.runtime/
+backend/__pycache__/
+*.db
+*.log
+.env
+.env.*
+!.env.example
+!.env.production.example
+.procesos_locales.json
+__pycache__/
