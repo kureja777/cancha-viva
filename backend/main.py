@@ -9,7 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from sqlalchemy import create_engine, text
 from sqlalchemy.exc import IntegrityError
-from publicacion import AccesoAdministrador
+from publicacion import RespuestaDemostracion
 
 ROOT = Path(__file__).resolve().parent
 env_file=ROOT.parent/'.env'
@@ -44,7 +44,7 @@ if DB_URL.startswith('postgresql://'):
     DB_URL = DB_URL.replace('postgresql://', 'postgresql+psycopg://', 1)
 engine = create_engine(DB_URL, connect_args={'check_same_thread': False} if DB_URL.startswith('sqlite') else {}, pool_pre_ping=True)
 app = FastAPI(title='Cancha Viva API', description='Canchas, clientes y reservas por turnos de una hora.', version='1.0.0')
-app.add_middleware(AccesoAdministrador)
+app.add_middleware(RespuestaDemostracion)
 app.add_middleware(CORSMiddleware, allow_origins=[x.strip().rstrip('/') for x in os.getenv('CORS_ORIGINS','http://127.0.0.1:5173,http://localhost:5173,http://127.0.0.1:4173').split(',') if x.strip()], allow_methods=['GET','POST'], allow_headers=['Content-Type','Authorization'])
 
 @app.get('/health',include_in_schema=False)

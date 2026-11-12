@@ -6,7 +6,7 @@ Sistema académico de reservas. Datos ficticios. Jhimi Jairo Mamani Blanco.
 
 Web: https://cancha-viva.vercel.app
 API Swagger: https://cancha-viva-api.onrender.com/docs
-Las rutas exigen la credencial de demostración. Las claves privadas no se publican.
+La demostración abre directamente, sin usuario ni contraseña. Las claves privadas de Supabase permanecen en el servidor.
 
 ## Abrir en esta laptop
 
@@ -40,8 +40,7 @@ En frontend, `npm run build` genera dist.
 ## Seguridad
 
 No compartas .env ni claves. El modo local escucha en loopback. En producción
-APP_ENV=production exige usuario y contraseña exclusiva de al menos 16 caracteres.
-HTTPS lo aporta el alojamiento. La credencial de demostración solo permanece
-en memoria del navegador. Es una protección mínima para un administrador de
-demostración, no un sistema de cuentas individuales ni de roles.
+APP_ENV=production exige la conexión privada a Supabase. HTTPS lo aporta el
+alojamiento. Por decisión del titular, la demostración con datos ficticios permite
+consultar, registrar y cancelar reservas sin iniciar sesión.
 Consulta PUBLICACION.md.

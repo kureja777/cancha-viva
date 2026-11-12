@@ -20,7 +20,7 @@ Build: `pip install -r requirements.txt`.
 Inicio: `uvicorn main:app --host 0.0.0.0 --port $PORT`.
 Salud pública /health solo confirma el proceso, no la base.
 Variables privadas: APP_ENV=production, SUPABASE_URL,
-SUPABASE_SERVICE_ROLE_KEY, WEB_AUTH_USER y WEB_AUTH_PASSWORD (mínimo 16 caracteres).
+SUPABASE_SERVICE_ROLE_KEY. Esta demostración pública no requiere WEB_AUTH_USER ni WEB_AUTH_PASSWORD.
 CORS_ORIGINS es el origen HTTPS exacto de Vercel sin barra final.
 render.yaml describe los valores, sin secretos ni contratación de un plan.
 
@@ -36,9 +36,9 @@ real de Render, sin /api al final. Añade el origen final de Vercel a Render.
 
 ## Comprobación y entrega
 
-Inicia sesión en la interfaz con la cuenta de demostración. En Swagger utiliza
-esa misma cuenta. Verifica GET 200, POST 201, persistencia y cancelación de una
-reserva futura ficticia. Comprueba 401 sin credencial y el visor 3D.
+Abre directamente la interfaz y Swagger sin iniciar sesión.
+Verifica GET 200, POST 201, persistencia y cancelación de una
+reserva futura ficticia. Comprueba también el visor 3D.
 No basta /health: /api/salud debe comprobar también la base.
 Añade al Word solo enlaces comprobados. Sube el PPTX a Canva o a un servicio
 compartible y verifica el enlace sin sesión. Graba el video sin credenciales.
